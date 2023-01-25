@@ -1,0 +1,41 @@
+name: rumochro
+recipe: wordpress
+keys:
+  - id_rsa
+  - id_ed25519
+config:
+  php: '7.4'
+  webroot: web
+  xdebug: false
+  ssl: true
+  via: nginx
+proxy:
+  appserver_nginx:
+    - 'rumochro.lndo.site'
+tooling:
+  envoy:
+    service: appserver
+    cmd: ./vendor/bin/envoy
+  install-deps:
+    description: Install Composer and Node dependencies
+    cmd:
+      - appserver: composer install
+  update-deps:
+    description: Update Composer and Node dependencies
+    cmd:
+      - appserver: composer update
+      - appserver: wp language core update && wp language theme update --all && wp language plugin update --all
+  pull:
+    description: Pull and import the database from production, sync uploads directory from production to local environment.
+    cmd:
+      - appserver: ./vendor/bin/envoy run pull
+  deploy:
+    description: Deploy main branch to production.
+    cmd:
+      - appserver: ./vendor/bin/envoy run deploy
+services:
+  appserver:
+    build:
+      - composer install
+excludes:
+  - vendor
