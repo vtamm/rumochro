@@ -40,7 +40,11 @@
     "roots/wordpress": "6.1.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
-    "wpackagist-theme/twentytwentythree": "^1.0"
+    "wpackagist-plugin/autodescription": "^4.2.7",
+    "wpackagist-plugin/wp-statistics": "^13.0",
+    "wpackagist-plugin/wp-mail-smtp": "^2.2",
+    "wpackagist-plugin/contact-form-7": "^5.3.2",
+    "wpackagist-plugin/site-health-tool-manager": "^1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
