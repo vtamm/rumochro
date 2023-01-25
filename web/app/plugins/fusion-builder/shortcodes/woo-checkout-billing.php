@@ -160,15 +160,25 @@ if ( fusion_is_element_enabled( 'fusion_tb_woo_checkout_billing' ) ) {
 			 * @return string
 			 */
 			public function get_woo_checkout_billing_content() {
+				global $avada_woocommerce;
+
 				$content = '';
 
 				if ( ! is_object( WC()->cart ) || 0 === WC()->cart->get_cart_contents_count() ) {
 					return $content;
 				}
 
+				if ( class_exists( 'Avada' ) && ! is_null( $avada_woocommerce ) ) {
+					remove_action( 'woocommerce_checkout_billing', [ $avada_woocommerce, 'checkout_billing' ], 20 );
+				}
+
 				ob_start();
 				do_action( 'woocommerce_checkout_billing' );
 				$content = preg_replace( '#<h3>(.*?)</h3>#', '', ob_get_clean(), 1 );
+
+				if ( class_exists( 'Avada' ) && ! is_null( $avada_woocommerce ) ) {
+					add_action( 'woocommerce_checkout_billing', [ $avada_woocommerce, 'checkout_billing' ], 20 );
+				}				
 
 				return apply_filters( 'fusion_woo_component_content', $content, $this->shortcode_handle, $this->args );
 			}

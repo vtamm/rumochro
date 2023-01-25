@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $sidebar_classes = apply_filters( 'awb_aside_2_tag_class', '' );
 $sticky_sidebar  = false !== strpos( $sidebar_classes, 'fusion-sticky-sidebar' );
 ?>
-<aside id="sidebar-2" class="<?php esc_attr( $sidebar_classes ); ?>" style="<?php esc_attr( apply_filters( 'awb_aside_2_tag_style', '' ) ); ?>" data="<?php echo esc_attr( apply_filters( 'awb_aside_2_tag_data', '' ) ); ?>">
+<aside id="sidebar-2" class="<?php echo esc_attr( $sidebar_classes ); ?>" style="<?php echo esc_attr( apply_filters( 'awb_aside_2_tag_style', '' ) ); ?>" data="<?php echo esc_attr( apply_filters( 'awb_aside_2_tag_data', '' ) ); ?>">
 	<?php if ( $sticky_sidebar ) : ?>
 		<div class="fusion-sidebar-inner-content">
 	<?php endif; ?>

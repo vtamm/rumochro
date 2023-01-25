@@ -557,11 +557,8 @@ class Avada_Woocommerce {
 			}
 		}
 
-		// If contain woocommerce checkout tabs element.
-		if ( fusion_library()->woocommerce->is_checkout_tabs() ) {
-			add_action( 'woocommerce_checkout_billing', [ $this, 'checkout_billing' ], 20 );
-			add_action( 'woocommerce_checkout_shipping', [ $this, 'checkout_shipping' ], 20 );
-		}
+		add_action( 'woocommerce_checkout_billing', [ $this, 'checkout_billing' ], 20 );
+		add_action( 'woocommerce_checkout_shipping', [ $this, 'checkout_shipping' ], 20 );
 
 		add_filter( 'woocommerce_enable_order_notes_field', [ $this, 'enable_order_notes_field' ] );
 	}
