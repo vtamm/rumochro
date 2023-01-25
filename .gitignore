@@ -2,11 +2,16 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
-web/app/themes/twentytwentythree/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
-web/app/cache/*
+
+#  IDE
+.idea
+
+# Database
+*.sql
+*.sql.gz
 
 # WordPress
 web/wp
@@ -17,7 +22,6 @@ web/.htaccess
 
 # Dotenv
 .env
-.env.*
 !.env.example
 
 # Composer
