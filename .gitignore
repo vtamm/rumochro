@@ -29,3 +29,7 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
+
+# Avada required plugins
+!web/app/plugins/fusion-core
+!web/app/plugins/fusion-builder

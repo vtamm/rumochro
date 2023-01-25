@@ -1,0 +1,332 @@
+.fusion-form-form-wrapper {
+  --awb-tooltip-text-color: #fff;
+  --awb-tooltip-background-color: #333;
+  --awb-field-margin-top: 1em;
+  --awb-field-margin-bottom: 1em;
+  --awb-form-input-height: var(--form_input_height);
+  --awb-form-bg-color: var(--form_bg_color);
+  --awb-label-font-size: var(--body_typography-font-size);
+  --awb-form-font-size: var(--form_text_size);
+  --awb-form-placeholder-color: var(--form_text_color);
+  --awb-form-text-color: var(--form_text_color);
+  --awb-form-label-color: var(--body_typography-color);
+  --awb-form-border-width-top: var(--form_border_width-top);
+  --awb-form-border-width-bottom: var(--form_border_width-bottom);
+  --awb-form-border-width-right: var(--form_border_width-right);
+  --awb-form-border-width-left: var(--form_border_width-left);
+  --awb-form-border-color: var(--form_border_color);
+  --awb-form-focus-border-color: var(--form_focus_border_color);
+  --awb-form-focus-border-hover-color: var(--form_focus_border_color-5a);
+  --awb-form-border-radius: var(--form_border_radius);
+  --awb-icon-alignment-top: var(--form_border_width-top);
+  --awb-icon-alignment-bottom: var(--form_border_width-bottom);
+  --awb-icon-alignment-font_size: 1em;
+  --awb-margin-top: 0;
+  --awb-margin-right: 0;
+  --awb-margin-bottom: 0;
+  --awb-margin-left: 0;
+  border: none;
+  margin: var(--awb-margin-top) var(--awb-margin-right) var(--awb-margin-bottom) var(--awb-margin-left);
+}
+.fusion-form-form-wrapper input[type="date"],
+.fusion-form-form-wrapper input[type="datetime-local"],
+.fusion-form-form-wrapper input[type="email"],
+.fusion-form-form-wrapper input[type="month"],
+.fusion-form-form-wrapper input[type="number"],
+.fusion-form-form-wrapper input[type="password"],
+.fusion-form-form-wrapper input[type="search"],
+.fusion-form-form-wrapper input[type="tel"],
+.fusion-form-form-wrapper input[type="text"],
+.fusion-form-form-wrapper input[type="time"],
+.fusion-form-form-wrapper input[type="url"],
+.fusion-form-form-wrapper input[type="week"],
+.fusion-form-form-wrapper input[type="datetime"] {
+  height: var(--awb-form-input-height);
+  background-color: var(--awb-form-bg-color);
+  color: var(--awb-form-text-color);
+  border-top-width: var(--awb-form-border-width-top);
+  border-bottom-width: var(--awb-form-border-width-bottom);
+  border-right-width: var(--awb-form-border-width-right);
+  border-left-width: var(--awb-form-border-width-left);
+  border-color: var(--awb-form-border-color);
+  border-radius: var(--awb-form-border-radius);
+  font-size: var(--awb-form-font-size);
+}
+.fusion-form-form-wrapper input[type="upload"] {
+  background-color: var(--awb-form-bg-color);
+  font-size: var(--awb-form-font-size);
+  color: var(--awb-form-text-color);
+  border-top-width: var(--awb-form-border-width-top);
+  border-bottom-width: var(--awb-form-border-width-bottom);
+  border-right-width: var(--awb-form-border-width-right);
+  border-left-width: var(--awb-form-border-width-left);
+  border-color: var(--awb-form-border-color);
+  border-radius: var(--awb-form-border-radius);
+}
+.fusion-form-form-wrapper input[type="range"] {
+  height: var(--awb-form-input-height);
+}
+.fusion-form-form-wrapper select {
+  height: var(--awb-form-input-height);
+  background-color: var(--awb-form-bg-color);
+  font-size: var(--awb-form-font-size);
+  color: var(--awb-form-text-color);
+  border-top-width: var(--awb-form-border-width-top);
+  border-bottom-width: var(--awb-form-border-width-bottom);
+  border-right-width: var(--awb-form-border-width-right);
+  border-left-width: var(--awb-form-border-width-left);
+  border-color: var(--awb-form-border-color);
+  border-radius: var(--awb-form-border-radius);
+}
+.fusion-form-form-wrapper select option {
+  color: var(--awb-form-text-color);
+}
+.fusion-form-form-wrapper textarea {
+  background-color: var(--awb-form-bg-color);
+  font-size: var(--awb-form-font-size);
+  color: var(--awb-form-text-color);
+  border-top-width: var(--awb-form-border-width-top);
+  border-bottom-width: var(--awb-form-border-width-bottom);
+  border-right-width: var(--awb-form-border-width-right);
+  border-left-width: var(--awb-form-border-width-left);
+  border-color: var(--awb-form-border-color);
+  border-radius: var(--awb-form-border-radius);
+}
+.fusion-body .fusion-form-form-wrapper input::placeholder,
+.fusion-body .fusion-form-form-wrapper textarea::placeholder,
+.fusion-body .fusion-form-form-wrapper select:invalid {
+  color: var(--awb-form-placeholder-color);
+}
+.fusion-form-form-wrapper input.fusion-form-upload-field::placeholder {
+  color: var(--awb-form-text-color);
+}
+.fusion-form-form-wrapper input:not([type="submit"]):focus,
+.fusion-form-form-wrapper textarea:focus {
+  border-color: var(--awb-form-focus-border-color);
+}
+.fusion-form-form-wrapper.has-icon-alignment .fusion-form-select-field .select-arrow,
+.fusion-form-form-wrapper.has-icon-alignment .fusion-form-field:not(.fusion-form-upload-field) .fusion-form-input-with-icon > i {
+  top: calc(50% + (var(--awb-icon-alignment-top) - var(--awb-icon-alignment-bottom)) / 2);
+}
+.fusion-form-form-wrapper.has-icon-alignment .fusion-form-field.fusion-form-textarea-field .fusion-form-input-with-icon > i {
+  top: calc(var(--awb-icon-alignment-top) + var(--awb-icon-alignment-font_size));
+}
+.fusion-form-form-wrapper .fusion-form-field {
+  position: relative;
+  width: 100%;
+  clear: both;
+  margin-top: var(--awb-field-margin-top);
+  margin-bottom: var(--awb-field-margin-bottom);
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-input {
+  width: 100%;
+  padding: 0 1em;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-input[type="file"] {
+  border-color: transparent;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-input:hover:not(:focus) {
+  border-color: var(--awb-form-focus-border-hover-color);
+}
+.fusion-form-form-wrapper .fusion-form-field label,
+.fusion-form-form-wrapper .fusion-form-field .label {
+  display: inline-block;
+  line-height: normal;
+  font-size: var(--awb-label-font-size);
+  color: var(--awb-form-label-color);
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-label-above label,
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-label-above .label {
+  margin-bottom: 0.65em;
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-label-below label,
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-label-below .label {
+  margin-top: 0.65em;
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-label-below .select-arrow {
+  top: 1px;
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-textarea-field .fusion-form-input-with-icon > i {
+  line-height: 1.4 !important;
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-textarea-field .fusion-form-input-with-icon i {
+  top: 1em;
+  transform: inherit;
+}
+.fusion-form-form-wrapper .fusion-form-field textarea {
+  width: 100%;
+}
+.fusion-form-form-wrapper .fusion-form-field textarea.fusion-form-input {
+  padding: 1em;
+  box-sizing: border-box;
+  height: auto;
+  border-style: solid;
+}
+.fusion-form-form-wrapper .fusion-form-field option[value=""][disabled] {
+  display: none;
+}
+.fusion-form-form-wrapper .fusion-form-field option {
+  color: var(--awb-form-text-color);
+}
+.fusion-form-form-wrapper .fusion-form-field input[type="file"] {
+  width: 100%;
+}
+.fusion-form-form-wrapper .fusion-form-field input[type="number"] {
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.fusion-form-form-wrapper .fusion-form-field input[type="color"] {
+  display: block;
+  width: 100%;
+}
+.fusion-form-form-wrapper .fusion-form-field input[type="date"] {
+  display: block;
+  width: 100%;
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-hidden-field {
+  display: none;
+}
+.fusion-form-form-wrapper .fusion-form-field.fusion-form-recaptcha-field .fusion-form-hide-recaptcha-badge {
+  display: none;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-tooltip {
+  display: inline-block;
+  margin-left: 0.4em;
+  cursor: pointer;
+  position: relative;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-tooltip .fusion-form-tooltip-content {
+  opacity: 0;
+  z-index: 9999;
+  width: auto !important;
+  white-space: nowrap;
+  pointer-events: none;
+  position: absolute;
+  bottom: 2.2em;
+  left: -1.35em;
+  transform: translateY(10px);
+  padding: 0.54em 0.65em;
+  background: var(--awb-tooltip-background-color);
+  color: var(--awb-tooltip-text-color);
+  border: 1px solid var(--awb-tooltip-background-color);
+  border-radius: 3px;
+  transition: all 0.2s ease 0.2s;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-tooltip .fusion-form-tooltip-content::before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: calc( 1.4em - 5px );
+  margin-left: 0.2em;
+  width: 0;
+  border-top: 0.6em solid;
+  border-right: 0.5em solid transparent;
+  border-left: 0.5em solid transparent;
+  border-top-color: inherit;
+  font-size: inherit;
+  line-height: 0;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-tooltip > i {
+  color: var(--awb-form-label-color);
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-tooltip:hover .fusion-form-tooltip-content {
+  opacity: 1;
+  transform: none;
+}
+.fusion-form-form-wrapper .fusion-form-field.error label:not(.fusion-form-rating-icon),
+.fusion-form-form-wrapper .fusion-form-field.error input {
+  color: #e0284f !important;
+}
+.fusion-form-form-wrapper .fusion-form-field.error .fusion-form-input,
+.fusion-form-form-wrapper .fusion-form-field.error .fusion-form-upload-field {
+  border-color: #e0284f !important;
+}
+.fusion-form-form-wrapper .fusion-form-field.error .fusion-form-input {
+  box-shadow: 0 0 1.5px 1px rgba(224, 40, 79, 0.65);
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-element-hidden {
+  display: none;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-input-with-icon {
+  position: relative;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-input-with-icon > i {
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+  top: 50%;
+  top: calc( 50% + ( var(--awb-form-border-width-top) - var(--awb-form-border-width-bottom) ) / 2 );
+  left: 1em;
+  transform: translateY(-50%);
+  color: var(--awb-form-text-color);
+  font-size: var(--awb-form-font-size);
+  line-height: var(--awb-form-input-height);
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-input-with-icon .fusion-form-input {
+  padding-left: 2.5em !important;
+}
+.fusion-form-form-wrapper .fusion-form-field .awb-form-pw-reveal > .awb-form-pw-reveal-icon {
+  left: auto;
+  right: 1em;
+  cursor: pointer;
+}
+.fusion-form-form-wrapper .fusion-form-field .awb-form-pw-reveal:not(.awb-form-both-icons) .fusion-form-input {
+  padding-left: 1em !important;
+}
+.fusion-form-form-wrapper .fusion-form-field .awb-form-pw-reveal .fusion-form-input {
+  padding-right: 2.5em !important;
+}
+.fusion-form-form-wrapper .fusion-form-field .wp-editor-tabs {
+  float: left;
+}
+.fusion-form-form-wrapper .fusion-form-field .wp-editor-tabs .switch-tmce {
+  margin-left: 0;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-section-wrapper .fusion-form-section-container .fusion-form-section-title-wrapper .fusion-form-section-title {
+  margin: 0;
+  line-height: 1.75 !important;
+}
+.fusion-form-form-wrapper .fusion-form-field .fusion-form-section-wrapper .fusion-form-section-container.fusion-alignright {
+  width: 100%;
+  text-align: right;
+  margin-left: 0;
+}
+.fusion-form-form-wrapper .fusion-form-field-hidden {
+  display: none;
+}
+.fusion-builder-live .fusion-form-form-wrapper button[type="submit"] {
+  pointer-events: none;
+}
+.fusion-form .form-submission-notices .fusion-form-response {
+  display: none;
+}
+.fusion-body .flatpickr-calendar.open {
+  z-index: 100000;
+}
+.fusion-form-widget .fusion-form-form-wrapper .fusion-layout-column {
+  width: 100%;
+  min-width: 100%;
+}
+@keyframes move {
+  0%,
+  32% {
+    margin-left: -2.74em;
+  }
+  33%,
+  66% {
+    margin-left: 0;
+  }
+  67%,
+  100% {
+    margin-left: 2.74em;
+  }
+}
+@-moz-document url-prefix() {
+  .fusion-form-form-wrapper .fusion-form-field select {
+    text-indent: -0.2em;
+  }
+}

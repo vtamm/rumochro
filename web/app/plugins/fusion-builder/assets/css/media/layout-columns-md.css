@@ -1,0 +1,23 @@
+.fusion_builder_column,
+.fusion_builder_column_inner,
+.fusion-layout-column.fusion-events-post {
+  --awb-padding-top-medium: var(--awb-padding-top);
+  --awb-padding-right-medium: var(--awb-padding-right);
+  --awb-padding-bottom-medium: var(--awb-padding-bottom);
+  --awb-padding-left-medium: var(--awb-padding-left);
+  --awb-col-width: var(--awb-width-medium, var(--medium-col-default));
+  --awb-col-order: var(--awb-order-medium, var(--awb-order-large));
+  --awb-margin-top-medium: var(--awb-margin-top-large, var(--col_margin-top, 0));
+  --awb-margin-bottom-medium: var(--awb-margin-bottom-large, var(--col_margin-bottom, 20px));
+  --awb-spacing-left-medium: var(--awb-spacing-left-large, 4%);
+  --awb-spacing-right-medium: var(--awb-spacing-right-large, 4%);
+  --awb-margin-top: var(--awb-margin-top-medium);
+  --awb-margin-bottom: var(--awb-margin-bottom-medium);
+  --awb-spacing-left: var(--awb-spacing-left-medium);
+  --awb-spacing-right: var(--awb-spacing-right-medium);
+}
+.fusion_builder_column .fusion-column-wrapper,
+.fusion_builder_column_inner .fusion-column-wrapper,
+.fusion-layout-column.fusion-events-post .fusion-column-wrapper {
+  padding: var(--awb-padding-top-medium) var(--awb-padding-right-medium) var(--awb-padding-bottom-medium) var(--awb-padding-left-medium);
+}
